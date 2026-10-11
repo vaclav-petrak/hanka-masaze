@@ -154,6 +154,20 @@
     .prices .price { font-weight: 500; font-size: 1.1rem; white-space: nowrap; }
     .prices-note { margin-top: 20px; color: var(--muted); font-size: .95rem; }
 
+    /* ---------- Contraindications ---------- */
+    .contra { margin-top: 64px; }
+    .contra-intro { max-width: 40em; margin: 0 auto 24px; color: var(--muted); }
+    .contra-grid { display: grid; gap: 20px; }
+    .contra-box { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 24px; }
+    .contra-box h4 { font: 400 1.4rem/1.2 var(--serif); margin: 0 0 14px; }
+    .contra-box ul { list-style: none; margin: 0; padding: 0; }
+    .contra-box li { position: relative; padding: 6px 0 6px 20px; color: var(--muted); }
+    .contra-box li::before {
+      content: ""; position: absolute; left: 2px; top: 1.05em;
+      width: 6px; height: 6px; border-radius: 50%; background: var(--gold);
+    }
+    .contra-note { margin: 22px auto 0; max-width: 40em; color: var(--muted); font-size: .95rem; }
+
     /* ---------- Steps ---------- */
     .steps-section { background: var(--paper); }
     .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; counter-reset: step; }
@@ -238,6 +252,7 @@
       .hero-actions .btn { width: auto; }
       .cards { grid-template-columns: 1fr 1fr; }
       .types { grid-template-columns: 1fr 1fr; }
+      .contra-grid { grid-template-columns: 1fr 1fr; }
       .contact-grid { grid-template-columns: 1fr 1fr; }
       .contact-cta { flex-direction: row; }
       .contact-cta .btn { width: auto; }
@@ -271,6 +286,7 @@
       <nav class="nav" aria-label="Hlavní navigace">
         <a href="#o-mne">O mně</a>
         <a href="#nabidka">Nabídka a ceník</a>
+        <a href="#kontraindikace">Kontraindikace</a>
         <a href="#atmosfera">Atmosféra</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
@@ -406,6 +422,43 @@
         </div>
 
         <p class="prices-note center reveal">Nevíte, co si vybrat? Napište mi nebo zavolejte, ráda poradím.</p>
+
+        <div class="contra" id="kontraindikace">
+          <h3 class="subhead reveal">Kontraindikace</h3>
+          <p class="contra-intro center reveal">
+            Masáž má být příjemná a bezpečná. V některých případech ji proto nelze provést
+            nebo je vhodné se nejdřív poradit s lékařem.
+          </p>
+          <div class="contra-grid">
+            <div class="contra-box reveal">
+              <h4>Masáž nelze provést při</h4>
+              <ul>
+                <li>horečce, nachlazení, chřipce a jiném akutním onemocnění</li>
+                <li>akutních zánětech (kůže, svalů, kloubů, žil)</li>
+                <li>kožních onemocněních, otevřených ranách a popáleninách v masírované oblasti</li>
+                <li>čerstvých úrazech – zlomeninách, výronech, natržených svalech, modřinách</li>
+                <li>trombóze, zánětu žil a výrazných křečových žilách</li>
+                <li>neléčeném vysokém krevním tlaku a závažných onemocněních srdce</li>
+                <li>požití alkoholu nebo jiných návykových látek</li>
+              </ul>
+            </div>
+            <div class="contra-box reveal">
+              <h4>Po konzultaci s lékařem</h4>
+              <ul>
+                <li>těhotenství</li>
+                <li>onkologická onemocnění</li>
+                <li>stavy po operacích</li>
+                <li>cukrovka, epilepsie, osteoporóza</li>
+                <li>užívání léků na ředění krve</li>
+                <li>akutní výhřez ploténky a jiné vážné potíže se zády</li>
+              </ul>
+            </div>
+          </div>
+          <p class="contra-note center reveal">
+            Před masáží se vás krátce zeptám na zdravotní stav. Pokud si nejste jisti,
+            ozvěte se mi předem – ráda vše proberu.
+          </p>
+        </div>
       </div>
     </section>
 
